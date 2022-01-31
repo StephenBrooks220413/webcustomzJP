@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+.title {
+    font-family: 'Comforter', cursive;
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.mainIntro { 
+    background: url('/img/homeBg.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: auto;
+    padding-top:210px;
+    padding-bottom: 210px;
+}
+
+.cards-bg {
+    background-image: linear-gradient(to bottom, #bf6dee, #F4F4F4);
+    padding-top: 40px;
+    width: 100%;
+}
+
+.blogsBg { 
+    background: url('/img/blogsImage.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    padding-top:30px;
+}

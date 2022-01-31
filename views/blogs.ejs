@@ -1,0 +1,25 @@
+<%- include('partials/header') -%>
+
+<div class="blogsBg">
+    <div class="container p-3 mt-5">
+        <h1 class="display-2 text-white">Customz Blogs</h1>
+    
+        <div class="row row-cols-12 d-flex mx-auto py-3 me-2">
+            <% for(var i = 0; i < blogposts.length; i++){ %> 
+                <div class="card m-3 p-3" style="opacity:0.7;">
+                    <a href="/post/<%= blogposts[i]._id %>">
+                        <h1 class="display-6"><%= blogposts[i].title %></h1>
+                    </a>
+                    <small>
+                        Created By <%= blogposts[i].email %>, <br>
+                        On <%= blogposts[i].datePosted.toString() %>
+                    </small>
+                </div>
+            <% } %>
+        </div>
+    
+    </div>
+</div>
+
+<%- include('partials/footer') -%>
+<%- include('partials/scripts') -%>

@@ -1,0 +1,105 @@
+<%- include('partials/header') -%>
+
+<div class="mainIntro">
+    <div class="container text-center mt-5 mb-5">
+
+        <h1 class="display-1 title text-info animate__animated animate__fadeInDown">JP's Customz Designs</h1>
+    
+        <p class="lead">
+            <% if (locals.isAuthenticated) { %>
+                <p class="text-info">You are logged in. <a href="/profile" class="underline">View your profile</a>.</p>
+            <% } else { %>
+                <p class="text-warning">You are not logged in. <a href="/login" class="underline">Login</a>.</p>
+            <% } %>
+        </p>
+        
+    </div>
+</div>
+
+<div class="cards-bg">
+    <div class="container-fluid">
+        <h1 class="display-5 text-white text-center mb-4">Recent Activity</h1>
+        <div class="row">
+            <div class="col-md mb-3">
+                <div class="card hover-zoom p-3">
+                    <label for="img1">Blogs</label>
+                    <a href="#!">
+                        
+                    </a>
+                    <% for(var i = 0; i < blogpost.length; i++){ %> 
+                        <div class="card p-2">
+                            <a href="/post/<%= blogpost[i]._id %>">
+                                <img src="/img/blogs.jpg" 
+                                    class="img-fluid shadow-2-strong rounded" 
+                                    id="img1" 
+                                    alt="blogs"
+                                >
+                            </a>
+                            <p class="lead"><%= blogpost[i].title %></p>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="col-md mb-3">
+                <div class="card hover-zoom p-3">
+                    <label for="img1">Catalog</label>
+                    <a href="#!">
+                        <img src="/img/catalog.png" 
+                            class="img-fluid shadow-2-strong rounded" 
+                            id="img1" 
+                            alt="blogs"
+                        >
+                    </a>
+                </div>
+            </div>
+            <div class="col-md mb-3">
+                <div class="card hover-zoom p-3">
+                    <label for="img1">SignUp</label>
+                    <a href="#!">
+                        <img src="/img/members.png" 
+                            class="img-fluid shadow-2-strong rounded" 
+                            id="img1" 
+                            alt="blogs"
+                        >
+                    </a>
+                </div>
+            </div>
+            <div class="col-md mb-3">
+                <div class="card hover-zoom p-3">
+                    <label for="img1">Reviews</label>
+                    <a href="#!">
+                        <img src="/img/reviews.png" 
+                            class="img-fluid shadow-2-strong rounded" 
+                            id="img1" 
+                            alt="blogs"
+                        >
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md mt-3">
+            <h3>Customized</h3>
+            <p class="lead">
+                Are you looking for customized clothes or 
+                other types of products? Look into my catalog 
+                or gallery. If you don't see want you need, 
+                then message me.
+            </p>
+            <a href="/catalog" class="btn btn-primary">Go To Catalog</a>
+        </div>
+        <div class="col-md mt-3">
+            <img src="/img/customized.png" 
+                class="img-fluid shadow-2-strong rounded" 
+                alt="custom"
+            />
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>
+<%- include('partials/scripts') -%>
